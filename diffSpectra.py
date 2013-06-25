@@ -88,7 +88,7 @@ class ManageData:
 
 class Output:
     """ For now this takes in the final df. And generates (a) a spectra (only
-    bions) and (b) only csv output
+    bions) and (b) xlsx output file
     """
     def __init__(self,df,name,inputHandles):
         self.inputs = inputHandles
@@ -119,6 +119,7 @@ class Output:
         #self.df.to_csv(self.outputDir+'/'+fname+'.csv',sep='\t',header=True,index=True,index_label='m/z')
         #self.df[self.df['Ions']=='BION'].to_csv(self.outputDir+'/'+fname+'.bion.csv',sep='\t',header=True,index=True,index_label='m/z')
         return True
+
     def autolabel(self,rects,ax,reducedLabels):
         # Attaches some text labels
         for rect in rects:
